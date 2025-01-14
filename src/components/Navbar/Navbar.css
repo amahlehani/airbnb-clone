@@ -1,0 +1,157 @@
+.logo-container img {
+    width: 110px;
+}
+
+.logo-container {
+    width: 260px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 36px;
+    height: 80px;
+}
+
+.middle-container{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.middle-container a {
+    text-decoration: none;
+    color: #b6b6b6;
+}
+
+.links-container {
+    color: #222222;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.home-link {
+    text-decoration: none;
+    color: #222222;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.menu-profile {
+    color: #6a6a6a;
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 50px;
+    padding: 6px;
+    gap: 10px;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: center;
+}
+.bottom-header-container {
+    display: flex;
+    align-items: center;
+    width: 850px;
+    height: 66px;
+    border: 1px solid lightgray;
+    border-radius: 50px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.04), 0px 4px 8px 0px rgba(0, 0, 0, 0.09);
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    color: #6a6a6a;
+    font-size: 15px;
+    margin-top: 3px;
+}
+
+.search-where {
+    margin-left: 35px;
+    width: 284px;
+}
+
+.checkin-date {
+    width: 140.5px;
+}
+
+.checkout-date {
+    width: 140.5px;
+}
+
+.guest-counter {
+    width: 231px;
+}
+
+.search-where, .checkin-date, .checkout-date, .guest-counter {
+    color: #222222;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+
+.search-input input {
+    font-size: 15px;
+    border: none;
+    outline:none;
+    background-color: transparent;
+    width: 218px;
+    height: 18px;
+    margin-top: 3px;
+}
+
+.search-icon-container {
+    display: flex;
+    background-color: #ff385c;
+    padding: 11px;
+    border: none;
+    border-radius: 50px;
+    margin-left: -37px;
+}
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.date-picker {
+    border: none;
+    outline: none;
+    margin-top: 3px;
+    font-size: 15px;
+    background-color: transparent;
+    color: #6a6a6a;
+}
+
+.guest-selector {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+}
+
+.guest-btn {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    margin: 0 10px;
+    background-color: #ff385c;
+    border: none;
+    color: white;
+}
+
+.guest-input {
+    outline: none;
+    border: none;
+    width: 25px;
+    margin-left: 15px;
+}

@@ -1,0 +1,47 @@
+{
+    "listings": [
+        {
+            "id": 1,
+            "title": "Modern Apartment",
+            "price": 1200,
+            "location": "Cape Town",
+            "images": ["https://via.placeholder.com/150"]
+        },
+        {
+            "id": 2,
+            "title": "Beachside Villa",
+            "price": 3000,
+            "location": "Durban",
+            "images": ["https://via.placeholder.com/150"]
+        },
+        {
+            "id": 3,
+            "title": "Luxurious Lodge",
+            "price": 5000,
+            "location": "Johannesburg",
+            "images": ["https://via.placeholder.com/150"]
+        },
+        {
+            "id": 4,
+            "title": "Spacious Condo",
+            "price": 1800,
+            "location": "Bloemfontein",
+            "images": ["https://via.placeholder.com/150"]
+        },
+        {
+            "id": 5,
+            "title": "Private Island Resort",
+            "price": 2500,
+            "location": "Pretoria",
+            "images": ["https://via.placeholder.com/150"]
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "test",
+            "email": "test@example.com",
+            "password": "password123"
+        }
+    ]
+}
