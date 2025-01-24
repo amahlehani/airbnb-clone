@@ -1,0 +1,39 @@
+# GET ALL USERS
+GET http://localhost:5000/users
+###
+
+# GET A SINGLE USER
+GET  http://localhost:5000/users/1
+###
+
+# REGISTER A USER 
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+  "name": "Elizabeth Reed",
+  "email": "elizabethreed@example.com",
+  "password": "password111"
+}
+###
+
+# LOGIN
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email": "elizabethreed@example.com",
+  "password": "password111"
+}
+###
+
+# GET ALL BOOKINGS
+GET http://localhost:5000/bookings
+###
+
+GET http://localhost:5000/users/1/bookings
+###
+
+# GET ALL LISTINGS
+GET http://localhost:5000/listings
+###

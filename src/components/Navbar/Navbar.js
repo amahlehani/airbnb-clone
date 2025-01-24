@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import "./Navbar.css";
 import { Link } from 'react-router-dom';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
@@ -16,6 +16,22 @@ const Navbar = () => {
   const [guestCount, setGuestCount] = useState(1);
   const [showGuestPopup, setShowGuestPopup] = useState(false);
   const popRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  // Handle clicks outside of the guest popup
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (popRef.current && !popRef.current.contains(event.target) && !buttonRef.current.contains(event.target)) {
+        setShowGuestPopup(false); // Close popup if clicked outside
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   const handleGuestChange = (operation) => {
     setGuestCount((prevCount) => {
@@ -67,7 +83,7 @@ const Navbar = () => {
           </div>
           <div className="guest-counter">
             <p>Who</p>
-            <button className="search-button" onClick={() => setShowGuestPopup(true)}>
+            <button className="search-button" onClick={() => setShowGuestPopup(true)} ref={buttonRef}>
               {guestCount > 0 ? `${guestCount} guests` : `${guestCount} guest`}
             </button>
             {showGuestPopup && (
