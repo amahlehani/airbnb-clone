@@ -1,0 +1,32 @@
+.listing-card {
+    height: 384.281px;
+    width: 300px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.listing-card img {
+    width: 299px;
+    height: 284px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.listing-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 2px;
+}
+
+.listing-location {
+    font-size: 15px;
+    color: #6a6a6a;
+    margin-bottom: 10px;
+}
+
+.listing-price {
+    font-size: 15px;
+    color: #222222;
+}
+

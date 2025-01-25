@@ -1,0 +1,12 @@
+.listings-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 30px;
+    flex-wrap: wrap;
+}
+
+.listing-link {
+    text-decoration: none;
+}

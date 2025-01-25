@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
+import './HomePage.css'
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchListings } from '../redux/actions/listingActions';
-import ListingCard from '../components/Listings/ListingCard';
+import { fetchListings } from '../../redux/reducers/listingReducer';
+import ListingCard from '../../components/Listings/ListingCard';
+import Banner from '../../components/Banner/Banner';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
     const dispatch = useDispatch();
@@ -15,10 +18,12 @@ const HomePage = () => {
 
     return (
         <div>
-            <h2>Featured Listings</h2>
+            <Banner />
             <div className='listings-container'>
                 {listings.map((listing) => (
-                    <ListingCard key={listing.id} listing={listing} />
+                    <Link to={`/listings/${listing.id}`} key={listing.id} className='listing-link'>  
+                        <ListingCard listing={listing} />
+                    </Link>
                 ))}
             </div>
         </div>

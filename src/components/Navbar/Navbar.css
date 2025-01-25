@@ -1,5 +1,6 @@
 .logo-container img {
     width: 110px;
+    cursor: pointer;
 }
 
 .logo-container {
@@ -30,6 +31,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    cursor: pointer;
 }
 
 .home-link {
@@ -37,6 +39,7 @@
     color: #222222;
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .menu-profile {
@@ -47,11 +50,22 @@
     border-radius: 50px;
     padding: 6px;
     gap: 10px;
+    cursor: pointer;
+}
+
+.account-circle {
+    border: none;
+    background-color: transparent;
+    color: #6a6a6a;
+    cursor: pointer;
 }
 
 .header-bottom {
     display: flex;
     justify-content: center;
+    padding-bottom: 22px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid lightgray;
 }
 .bottom-header-container {
     display: flex;
@@ -113,6 +127,7 @@
     border: none;
     border-radius: 50px;
     margin-left: -37px;
+    cursor: pointer;
 }
 
 .search-icon {
@@ -147,6 +162,7 @@
     background-color: #ff385c;
     border: none;
     color: white;
+    cursor: pointer;
 }
 
 .guest-input {

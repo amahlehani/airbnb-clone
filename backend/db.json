@@ -6,34 +6,34 @@
       "price": 1200,
       "location": "Cape Town",
       "images": [
-        "https://via.placeholder.com/150"
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/269506906.jpg?k=f92344f2e6a6ae535689e39493380c9045f25ba72bd2536e7ecf8ba41bcd58ca&o=&hp=1"
       ]
     },
     {
       "id": 2,
       "title": "Beachside Villa",
-      "price": 3000,
+      "price": 2496,
       "location": "Durban",
       "images": [
-        "https://via.placeholder.com/150"
+        "https://a0.muscache.com/im/pictures/miso/Hosting-1090223978885961812/original/429c8fec-bef6-4a06-a041-3041ad6da880.jpeg?im_w=1200&im_format=avif"
       ]
     },
     {
       "id": 3,
       "title": "Luxurious Lodge",
-      "price": 5000,
+      "price": 2430,
       "location": "Johannesburg",
       "images": [
-        "https://via.placeholder.com/150"
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTMwMjk2OTk5Mjc5NzkzNzQzNQ%3D%3D/original/f375f940-2dc6-4508-83f4-a54b4b7d01db.png?im_w=1200&im_format=avif"
       ]
     },
     {
       "id": 4,
       "title": "Spacious Condo",
-      "price": 1800,
+      "price": 1488,
       "location": "Bloemfontein",
       "images": [
-        "https://via.placeholder.com/150"
+        "https://a0.muscache.com/im/pictures/miso/Hosting-793177582141833316/original/59d73e24-f93a-4235-a907-ac4f38ea71ab.jpeg?im_w=960&im_format=avif"
       ]
     },
     {
@@ -42,7 +42,34 @@
       "price": 2500,
       "location": "Pretoria",
       "images": [
-        "https://via.placeholder.com/150"
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTExNDk4MzgyNDAyNDc1MzYwNg%3D%3D/original/acf41a40-1917-4df2-a97a-48ac0f4359ef.jpeg?im_w=1200&im_format=avif"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Trendy Apartment",
+      "price": 1340,
+      "location": "Vietnam",
+      "images": [
+        "https://a0.muscache.com/im/pictures/miso/Hosting-797659157916763175/original/ee63920f-eeeb-4b65-ae44-98476d666bf4.jpeg?im_w=960&im_format=avif"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Woodlands Cabin",
+      "price": 4774,
+      "location": "West Virginia, US",
+      "images": [
+        "https://a0.muscache.com/im/pictures/miso/Hosting-923108576175937657/original/6a4e7694-2675-438c-8422-9800693c1728.jpeg?im_w=1200&im_format=avif"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Charming Cottage",
+      "price": 2556,
+      "location": "Cotswold, UK",
+      "images": [
+        "https://a0.muscache.com/im/pictures/miso/Hosting-49966166/original/a1106bbe-5285-4155-8e2a-ea4dc09e3fa5.jpeg?im_w=960&im_format=avif"
       ]
     }
   ],
@@ -64,6 +91,12 @@
       "password": "$2a$10$FN2bUUA.U.SFZ9lTF3iVo.USeu5dSkzHp6mWx5VrXBDmMNYCSv9XK",
       "name": "Elizabeth Reed",
       "id": 3
+    },
+    {
+      "email": "maryreed@example.com",
+      "password": "$2a$10$7m.S.nM1GMobbgtTrZ4kS.uTRTReLMlVDXdydkmiPspy8ZjYgWP8W",
+      "name": "Mary Reed",
+      "id": 4
     }
   ],
   "bookings": [

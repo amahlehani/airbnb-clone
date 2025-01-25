@@ -1,13 +1,14 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import { thunk } from "redux-thunk";
+import { configureStore } from '@reduxjs/toolkit';
+import { thunk } from 'redux-thunk';
 import listingReducer from "./reducers/listingReducer";
 import userReducer from "./reducers/userReducer";
 
-const rootReducer = combineReducers({
-    listings: listingReducer,
-    user: userReducer
+export const store = configureStore({
+    reducer: {
+        listings: listingReducer,
+        user: userReducer
+    },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
+    devTools: process.env.NODE_ENV !== 'production',
 });
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
-
-export default store;

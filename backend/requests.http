@@ -11,9 +11,9 @@ POST http://localhost:5000/register
 Content-Type: application/json
 
 {
-  "name": "Elizabeth Reed",
-  "email": "elizabethreed@example.com",
-  "password": "password111"
+  "name": "Mary Reed",
+  "email": "maryreed@example.com",
+  "password": "password112"
 }
 ###
 
@@ -22,8 +22,8 @@ POST http://localhost:5000/login
 Content-Type: application/json
 
 {
-  "email": "elizabethreed@example.com",
-  "password": "password111"
+  "email": "maryreed@example.com",
+  "password": "password112"
 }
 ###
 
@@ -31,9 +31,15 @@ Content-Type: application/json
 GET http://localhost:5000/bookings
 ###
 
+# GET A SINGLE BOOKING
+GET  http://localhost:5000/bookings/1
+###
+
+# GET A USER'S BOOKINGS
 GET http://localhost:5000/users/1/bookings
 ###
 
 # GET ALL LISTINGS
 GET http://localhost:5000/listings
 ###
+

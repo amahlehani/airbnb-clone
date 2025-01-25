@@ -1,0 +1,34 @@
+.banner {
+    margin-bottom: 30px;
+    height: 420px;
+    background: url("https://www.thompsons.co.za/assets/Robberg-Garden-Route-in-South-Africa-shutterstock_508332541__FillWzE0NDAsNDUwXQ.jpg");
+}
+
+.banner-info {
+    background-color: black;
+    color: white;
+    padding-top: 20vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+    width: 300px;
+}
+
+.banner-info > button {
+    background-color: #ff385c;
+    color: white;
+    text-transform: inherit;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.banner-info > button:hover {
+    background-color: white;
+    color: #ff385c;
+}
+
+.banner-info > h5 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+

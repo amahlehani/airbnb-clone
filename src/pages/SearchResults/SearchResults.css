@@ -1,0 +1,29 @@
+.search-result img {
+    border-radius: 12px;
+    width: 560px;
+    height: 300px;
+    margin-bottom: 35px;
+}
+
+.search-result h1 {
+    margin-bottom: 25px;
+    color: #222222;
+}
+
+.search-location {
+    font-size: 22px;
+    color: #222222;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.search-price {
+    font-size: 22px;
+    color: #222222;
+    margin-bottom: 40px;
+}
+
+.results-container {
+    padding: 0 40px;
+    padding-bottom: 50px;
+}

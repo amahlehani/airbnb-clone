@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import "./Navbar.css";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -9,14 +10,28 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.module.css';
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
+import SignIn from '../SignIn/SignIn';
+import { fetchListings } from '../../redux/actions/listingActions';
 
 const Navbar = () => {
   const [checkInDate, setCheckInDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
   const [guestCount, setGuestCount] = useState(1);
   const [showGuestPopup, setShowGuestPopup] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const { isAuthenticated } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
   const popRef = useRef(null);
   const buttonRef = useRef(null);
+
+  const handleSignOut = () => {
+    dispatch({ type: 'LOGOUT' });
+  };
 
   // Handle clicks outside of the guest popup
   useEffect(() => {
@@ -40,15 +55,48 @@ const Navbar = () => {
     })
   }
 
+  const handleSearch = () => {
+    if (searchQuery) {
+      const queryParams = new URLSearchParams();
+
+      const locationMatch = searchQuery.match(/location:\s*([^,\s]+)/);
+      if (locationMatch) {
+        queryParams.append("location_like", locationMatch[1]);
+      }
+
+      const priceMatch = searchQuery.match(/price:\s*(\d+)-(\d+)/);
+      if (priceMatch) {
+        queryParams.append("min_price", priceMatch[1]);
+        queryParams.append("max_price", priceMatch[2]);
+      }
+
+      const dateMatch = searchQuery.match(
+        /from:\s*(\d{4}-\d{2}-\d{2})\s*to:\s*(\d{4}-\d{2}-\d{2})/
+      );
+      if (dateMatch) {
+        queryParams.append("start_date", dateMatch[1]);
+        queryParams.append("end_date", dateMatch[2]);
+      }
+
+      const queryString = queryParams.toString();
+
+      dispatch(fetchListings(queryString));
+
+      navigate(`/search-results?${queryParams.toString()}`);
+    }
+  };
+
   return (
     <>
       <div className="navbar">
         <div className="logo-container">
-          <img
-            src="https://1000logos.net/wp-content/uploads/2017/08/Airbnb-Logo.png"
-            className="navbar-logo"
-            alt="logo"
-          />
+          <Link to="/" className="logo-link">
+            <img
+              src="https://1000logos.net/wp-content/uploads/2017/08/Airbnb-Logo.png"
+              className="navbar-logo"
+              alt="logo"
+            />
+          </Link>
         </div>
         <div className="middle-container">
           <Link to="/">Stays</Link>
@@ -61,8 +109,17 @@ const Navbar = () => {
           <LanguageOutlinedIcon fontSize="small" />
           <div className="menu-profile">
             <MenuOutlinedIcon fontSize="small" />
-            <AccountCircleIcon fontSize="large" />
+            {!isAuthenticated ? (
+              <button className='account-circle' onClick={() => setIsModalOpen(true)}>
+                <AccountCircleIcon fontSize="large" />
+              </button>
+            ) : (
+              <button className='account-circle' onClick={handleSignOut}>
+                <AccountCircleIcon fontSize="large" />
+              </button>
+            )}
           </div>
+          {isModalOpen && <SignIn onClose={() => setIsModalOpen(false)} />}
         </div>
       </div>
       <div className="header-bottom">
@@ -70,7 +127,12 @@ const Navbar = () => {
           <div className="search-where">
             <p>Where</p>
             <div className="search-input">
-              <input type="text" placeholder="Search destinations" />
+              <input 
+                type="text" 
+                placeholder="Search destinations" 
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
             </div>
           </div>
           <div className="checkin-date">
@@ -101,7 +163,7 @@ const Navbar = () => {
             )}
           </div>
           <div className="search-icon-container">
-            <SearchIcon className="search-icon" />
+            <SearchIcon className="search-icon" onClick={handleSearch} />
           </div>
         </div>
       </div>
